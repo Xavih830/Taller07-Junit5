@@ -105,5 +105,15 @@ public class TestOperations {
   }
 
   @Test
-  @DisplayName("Prueba de que Solve cumpla con los estandares de ")
+  @DisplayName("Prueba de que Solve cumpla con la división para cero")
+  public void testSolveDivZero(){
+    Solve("10/0");
+  }
+
+  @Test
+  @DisplayName("Prueba de que Solve pueda ejecutar una operación con varios operadores")
+  public void testSolveMulOperators(){
+    String result = Solve("10*10/2");
+    assertEquals("10*10/2=50", result);
+  }
 }
