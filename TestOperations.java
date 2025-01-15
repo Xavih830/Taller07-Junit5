@@ -8,24 +8,42 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestOperations {
   
   public OperationsTest() {
-    }
+  }
     
-    @BeforeAll
-    public static void setUpClass() {
-    }
+  @BeforeAll
+  public static void setUpClass() {
+  }
     
-    @AfterAll
-    public static void tearDownClass() {
-    }
+  @AfterAll
+  public static void tearDownClass() {
+  }
     
-    @BeforeEach
-    public void setUp() {
-    }
+  @BeforeEach
+  public void setUp() {
+  }
     
-    @AfterEach
-    public void tearDown() {
-    }
+  @AfterEach
+  public void tearDown() {
+  }
 
-    
+  @Test
+  public void testMakeFormula() {
+    System.out.println("MakeFormula");
+    String expResult = "";
+    String result = Operations.MakeFormula();
+    assertEquals(expResult, result);    
+    fail("The test case is a prototype.");
+  } 
+
+  @Test
+  public void testSolve() {
+    System.out.println("Solve");
+    String formula = "";
+    String expResult = "";
+    String result = Operations.Solve(formula);
+    assertEquals(expResult, result);
+    fail("The test case is a prototype.");
+  }
+
   
 }
